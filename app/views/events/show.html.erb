@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Event Creator:</strong>
+  <%= @event.user.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <%= link_to 'Invite Your Friends', new_event_invite_path(@event) %>
+</p>
+
+<% render 'invites/invite_list.html.erb',:invites => @event.invites %>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

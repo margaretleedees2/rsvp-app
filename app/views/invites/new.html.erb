@@ -1,0 +1,29 @@
+<h1><%= link_to @invite.event.name, event_path(@invite.event) %></h1>
+<hr>
+<br>
+
+<%= form_for(@invite) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.hidden_field :event_id %><br>
+  </div>
+
+	<div class="actions">
+    <%= f.submit %>
+  </div>
+ <% end %>
+
+<hr> 
+
+<h3> Invitees </h3>
+ <ul>
+ 	<% @invites.each do |invite| %>
+ 		<li><%= invite.name %></li>
+ 	<% end %>
+ </ul>
+

@@ -1,0 +1,16 @@
+<h1>RSVP</h1>
+
+
+<%= form_for(@invite) do |f| %>
+
+ 	<div class="actions"> s
+    <%= f.submit "I am attending!"%>
+
+  </div>
+
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>
